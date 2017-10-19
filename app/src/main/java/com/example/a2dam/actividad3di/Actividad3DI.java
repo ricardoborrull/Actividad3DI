@@ -1,3 +1,5 @@
+//Ricardo Borrull Vilches
+
 package com.example.a2dam.actividad3di;
 
 import android.graphics.Color;
@@ -10,53 +12,42 @@ import android.widget.TextView;
 
 public class Actividad3DI extends AppCompatActivity implements View.OnClickListener{
 
+    //Declaro los álbumes
     private TextView a1, a2, a3, a4;
+    //Declaro el TAG
     private final String TAG = "prueba";
-
+    //Declaro las fotos
     private TextView foto;
+    //Declaro el layout
     private GridLayout fotos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actividad3_di);
+
+        //Declaro la IDs
         a1 = (TextView) findViewById(R.id.a1);
         a2 = (TextView) findViewById(R.id.a2);
         a3 = (TextView) findViewById(R.id.a3);
         a4 = (TextView) findViewById(R.id.a4);
-
         fotos = (GridLayout) findViewById(R.id.fotos);
 
-        //f1 = (TextView) findViewById(R.id.f1);
-        //f2 = (TextView) findViewById(R.id.f2);
-
-
-        /*a1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "Nombre: " + a1.getText());
-                //String[] album1 = new String[9];
-                    for (int i = 0; i<10; i++ ){
-                        new TextView(this);
-                        f1.setText("Foto "+i);
-                        fotos.addView(f1);
-                    }
-                f1.setBackgroundColor(Color.parseColor("#FFFF4444"));
-            }
-        });*/
-
-
+        //Declaro los ClickListeners
         a1.setOnClickListener(this);
         a2.setOnClickListener(this);
         a3.setOnClickListener(this);
         a4.setOnClickListener(this);
     }
 
+    //Declaro el método onClick
     @Override
     public void onClick(View v) {
 
+        //Método para implementar las fotos
         if (v.getId() == a1.getId()) {
             Log.d(TAG, "Nombre: " + a1.getText());
+            //Borro las fotos que ya estén
             fotos.removeAllViews();
             for (int i = 1; i < 10; i++) {
                 foto = new TextView(this);
@@ -66,6 +57,7 @@ public class Actividad3DI extends AppCompatActivity implements View.OnClickListe
                 foto.setBackgroundColor(Color.parseColor("#FFFF4444"));
                 foto.setWidth(180);
                 foto.setHeight(180);
+                //Añado margenes.
                 GridLayout.LayoutParams margins = new GridLayout.LayoutParams();
                 margins.setMargins(10, 10, 10, 10);
                 foto.setLayoutParams(margins);
