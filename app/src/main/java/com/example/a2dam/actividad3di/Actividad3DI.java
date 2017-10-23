@@ -49,7 +49,7 @@ public class Actividad3DI extends AppCompatActivity implements View.OnClickListe
             Log.d(TAG, "Nombre: " + a1.getText());
             //Borro las fotos que ya estén
             fotos.removeAllViews();
-            for (int i = 1; i < 10; i++) {
+            for (int i = 1; i < 14; i++) {
                 foto = new TextView(this);
                 foto.setText("Foto " + i);
                 foto.setTextSize(18);
@@ -67,7 +67,7 @@ public class Actividad3DI extends AppCompatActivity implements View.OnClickListe
         if (v.getId() == a2.getId()) {
             Log.d(TAG, "Nombre: " + a2.getText());
             fotos.removeAllViews();
-            for (int i = 1; i < 23; i++) {
+            for (int i = 1; i < 19; i++) {
                 foto = new TextView(this);
                 foto.setText("Foto " + i);
                 foto.setTextSize(18);
@@ -81,38 +81,38 @@ public class Actividad3DI extends AppCompatActivity implements View.OnClickListe
             }
         }
 
-            if (v.getId() == a3.getId()) {
-                Log.d(TAG, "Nombre: " + a3.getText());
-                fotos.removeAllViews();
-                for (int i = 1; i < 25; i++) {
-                    foto = new TextView(this);
-                    foto.setText("Foto " + i);
-                    foto.setTextSize(18);
-                    fotos.addView(foto);
-                    foto.setBackgroundColor(Color.parseColor("#FF99CC00"));
-                    foto.setWidth(180);
-                    foto.setHeight(180);
-                    GridLayout.LayoutParams margins = new GridLayout.LayoutParams();
-                    margins.setMargins(10, 10, 10, 10);
-                    foto.setLayoutParams(margins);
-                }
+        if (v.getId() == a3.getId()) {
+            Log.d(TAG, "Nombre: " + a3.getText());
+            fotos.removeAllViews();
+            for (int i = 1; i < 25; i++) {
+                foto = new TextView(this);
+                foto.setText("Foto " + i);
+                foto.setTextSize(18);
+                fotos.addView(foto);
+                foto.setBackgroundColor(Color.parseColor("#FF99CC00"));
+                foto.setWidth(180);
+                foto.setHeight(180);
+                GridLayout.LayoutParams margins = new GridLayout.LayoutParams();
+                margins.setMargins(10, 10, 10, 10);
+                foto.setLayoutParams(margins);
             }
+        }
 
-            if (v.getId() == a4.getId()) {
-                Log.d(TAG, "Nombre: " + a4.getText());
-                fotos.removeAllViews();
-                for (int i = 1; i < 15; i++) {
-                    foto = new TextView(this);
-                    foto.setText("Foto " + i);
-                    foto.setTextSize(18);
-                    fotos.addView(foto);
-                    foto.setBackgroundColor(Color.parseColor("#FFFFBB33"));
-                    foto.setWidth(180);
-                    foto.setHeight(180);
-                    GridLayout.LayoutParams margins = new GridLayout.LayoutParams();
-                    margins.setMargins(10, 10, 10, 10);
-                    foto.setLayoutParams(margins);
-                }
+        if (v.getId() == a4.getId()) {
+            Log.d(TAG, "Nombre: " + a4.getText());
+            fotos.removeAllViews();
+            for (int i = 1; i < 15; i++) {
+                foto = new TextView(this);
+                foto.setText("Foto " + i);
+                foto.setTextSize(18);
+                fotos.addView(foto);
+                foto.setBackgroundColor(Color.parseColor("#FFFFBB33"));
+                foto.setWidth(180);
+                foto.setHeight(180);
+                GridLayout.LayoutParams margins = new GridLayout.LayoutParams();
+                margins.setMargins(10, 10, 10, 10);
+                foto.setLayoutParams(margins);
             }
         }
     }
+}
